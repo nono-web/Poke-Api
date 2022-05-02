@@ -1,0 +1,9 @@
+.h-pokemon {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.h-img {
+    width: 25rem;
+}
