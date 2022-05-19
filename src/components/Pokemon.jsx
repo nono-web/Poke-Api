@@ -46,7 +46,6 @@ const Button = styled.button `
     }
   &:nth-child(2) {
     &:hover {
-     
       background-color: rgba(71, 255, 141, 0.452);
     }
   }
@@ -78,14 +77,12 @@ const Pokemon = () => {
       />
       <ContainerButton>
       <Button
-       
         type="button"
         onClick={() => getPokeApi(pokeid - 1)}
       >
         Prev
       </Button>
       <Button
-        
         type="button"
         onClick={() => getPokeApi(pokeid + 1)}
       >
