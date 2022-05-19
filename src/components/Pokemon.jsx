@@ -25,7 +25,13 @@ const Image = styled.img`
   margin: 1rem;
 `;
 
-const Button = styled.button`
+const ContainerButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Button = styled.button `
   border: 0.1rem solid black;
   border-radius: 2rem;
   margin: 1rem;
@@ -35,15 +41,15 @@ const Button = styled.button`
   font-weight: bold;
   &:nth-child(1) {
     &:hover {
-      background-color: rgba(71, 255, 141, 0.452);
+      background-color: red;
     }
   }
   &:nth-child(2) {
     &:hover {
-      background-color: rgba(255, 99, 71, 0.452);
+      background-color: green;
     }
   }
-`;
+`
 
 const Pokemon = () => {
   const [poke, setPoke] = useState([]);
@@ -69,20 +75,22 @@ const Pokemon = () => {
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${poke.id}.svg`}
         alt={poke.name}
       />
+      <ContainerButton>
       <Button
-        id="button-prev"
+       
         type="button"
         onClick={() => getPokeApi(pokeid - 1)}
       >
         Prev
       </Button>
       <Button
-        id="button-next"
+        
         type="button"
         onClick={() => getPokeApi(pokeid + 1)}
       >
         Next
       </Button>
+      </ContainerButton>
     </Container>
   );
 };
