@@ -41,12 +41,13 @@ const Button = styled.button `
   font-weight: bold;
   &:nth-child(1) {
     &:hover {
-      background-color: red;
+      background-color: rgba(255, 99, 71, 0.452);
+}
     }
-  }
   &:nth-child(2) {
     &:hover {
-      background-color: green;
+     
+      background-color: rgba(71, 255, 141, 0.452);
     }
   }
 `
